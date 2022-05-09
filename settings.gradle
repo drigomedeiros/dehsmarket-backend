@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'shoppingbag'
-include('lib')
+include('core')
