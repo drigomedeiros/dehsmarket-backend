@@ -1,10 +1,10 @@
 # Welcome to Deh's Market Backend!
 
-Inspired on https://github.com/dehcastro/dehsmarket project, created to help people to facilitate TDD sessions, I resolved to create the Deh's market backend to help people to facilitate BDD sessions.
+Inspired on [https://github.com/dehcastro/dehsmarket](https://github.com/dehcastro/dehsmarket) project, created to help people to facilitate TDD sessions, I resolved to create the Deh's market backend to help people to facilitate BDD sessions.
 
 ## Where we are
 
-At this point of the project, Features Written tag, all we have is the features of our backend specified. Feel free and comfortable to implement the feature as you want.
+At this point of the project, Features Written tag, all we have is the specified features of our backend. Feel free and comfortable to implement the feature as you want.
  
 ## Project 
 
