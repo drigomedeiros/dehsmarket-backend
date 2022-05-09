@@ -19,9 +19,6 @@ Feature: Visualize Products
     Scenario Outline: Sort list of product
         Given a list of products being presented
         When a user sort by <sorter>
-        Then present the products sorted by <sorter> 
-
-    
-
+        Then present the products sorted by <sorter>
 
 
