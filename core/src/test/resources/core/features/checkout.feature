@@ -8,9 +8,9 @@ Feature: Checkout to payment
         Given the user has a bag of products 
         And the user is identified
         When they finish the order 
-        Then send to the user a mail with the invoice 
+        Then a mail is sent to the user with the invoice 
 
     Scenario: Unidentified user 
         Given an unidentified user
         When they try to checkout 
-        Then ask user to identify themselves
+        Then the user is asked to identify themselves

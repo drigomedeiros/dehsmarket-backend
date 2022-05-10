@@ -3,13 +3,14 @@ Feature: Identify user
     I want to identify myself
     So then a can checkout my products
 
-    Scenario: A user informs a known mail
-        Given an user mail
-        When it already exists in our database
-        Then return the mail
+    Scenario Outline: A user informs a mailto proceed to checkout
+        Given an user informing a <mail>
+        When they try to get authorized
+        Then their ability to checkout will be <result>
 
-    Scenario: A user informs an unknown mail
-        Given an user mail
-        When it doesn't exist in our database
-        Then store it in our database
-        And return the mail
+        Examples:
+            | mail                         | result |
+            | an_existing_mail@gmail.com   | true   |
+            | an_invalid_mail@smt          | false  |
+            | other_invalid_mail           | false  |
+            | an_unexisting_mail@yahoo.com | tue    |
