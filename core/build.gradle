@@ -52,10 +52,29 @@ task cucumber() {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'com.dehsmarket', 'src/test/resources/core/features']
+            args = ['--plugin', 'pretty', '--glue', 'com.dehsmarket.unit', 'src/test/resources/core/features']
         }
     }
 }
 
+task cucumberIntegration() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'com.dehsmarket.integration', 'src/test/resources/core/features']
+        }
+    }
+}
 
-
+task cucumberFunctional() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'com.dehsmarket.functional', 'src/test/resources/core/features']
+        }
+    }
+}
